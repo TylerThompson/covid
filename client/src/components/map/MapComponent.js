@@ -5,7 +5,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { connect } from 'react-redux';
 
 import { MAPBOX_ACCESS_TOKEN, MAP_STYLE_ACTION, MAP_FLY_ACTION } from '../../actions/constants';
-const PORT = process.env.CLIENT_PORT || 3001;
+const PORT = process.env.SERVER_PORT || 3001;
 mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
 
 var map = null;
