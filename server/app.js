@@ -6,7 +6,7 @@ const cors = require('cors');
 const cron = require('node-cron');
 //
 const countryList = require('./country_list.json');
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.SERVER_PORT || 3001;
 
 const db = 'covid-19';
 const collection = 'covid_statistics';
