@@ -4,6 +4,7 @@ const fs = require('fs');
 const csv = require('csv-parser');
 const cors = require('cors');
 const cron = require('node-cron');
+const path = require('path');
 //
 const countryList = require('./country_list.json');
 const PORT = process.env.PORT || 3000;
@@ -13,6 +14,8 @@ const collection = 'covid_statistics';
 
 const app = express();
 app.use(cors());
+app.use(express.static(path.join(__dirname, '../build')));
+
 
 const MongoClient = require('mongodb').MongoClient;
 const url = `mongodb://localhost:27017/${db}`;
@@ -103,7 +106,7 @@ cron.schedule('22 59 * * * *', async function () {
     }
 });
 
-app.get('/', async function (req, res) {
+app.get('/api', async function (req, res) {
     MongoClient.connect(url, function (err, client) {
         if (err) throw err;
 
@@ -116,7 +119,7 @@ app.get('/', async function (req, res) {
     });
 });
 
-app.get('/markers.geojson', function (req, res) {
+app.get('/api/markers.geojson', function (req, res) {
     MongoClient.connect(url, function (err, client) {
         if (err) throw err;
 
@@ -180,6 +183,11 @@ app.get('/markers.geojson', function (req, res) {
             }
         })
     });
+});
+
+// serve from build dir
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build', 'index.html'));
 });
 
 function getStatistics(country_obj, results) {

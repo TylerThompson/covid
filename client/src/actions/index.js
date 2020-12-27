@@ -18,32 +18,32 @@ export const dispatchMarkers = data => ({
 });
 
 export const fetchCoronaStatistics = () => dispatch => {
-    fetch(BASE_URL)
-    .then(response =>  response.json())
-    .then(data => {
-       dispatch(dispatchStatistics(data));
-    })
+    fetch(`${BASE_URL}/api`)
+        .then(response => response.json())
+        .then(data => {
+            dispatch(dispatchStatistics(data));
+        })
 }
 
 export const fetchMarkers = () => dispatch => {
-    fetch(BASE_URL+"markers.geojson")
-    .then(response =>  response.json())
-    .then(data => {
-       dispatch(dispatchMarkers(data));
-    })
+    fetch(BASE_URL + "api/markers.geojson")
+        .then(response => response.json())
+        .then(data => {
+            dispatch(dispatchMarkers(data));
+        })
 }
 
 export const showCountryStatistics = item => ({
     type: SHOW_COUNTRY_STATISTICS,
-    payload: {item}
+    payload: { item }
 })
 
 export const setMapStyle = style => ({
     type: MAP_STYLE,
-    payload: {style}
+    payload: { style }
 })
 
 export const setAction = action => ({
     type: SET_ACTION,
-    payload: {action}
+    payload: { action }
 })
