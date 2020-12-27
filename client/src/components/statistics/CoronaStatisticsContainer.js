@@ -282,8 +282,8 @@ class CoronaStatisticsContainer extends Component {
           </div>
           : null}
         <div className={this.state.isAboutModal && !this.state.matches ? 'tooltip-container-hide' : 'tooltip-container'}>
-          <img src={"/img/icons/ic_dark_map_style.PNG"} className={'map-style-dark-img'} alt="Dark Theme" onClick={this.onSetMapStyle.bind(this, 'mapbox://styles/hackbotone/ck8vtayrp0x5f1io3sakcmpnv')} />
-          <img src={"/img/icons/ic_light_map_style.PNG"} className={'map-style-light-img'} alt="Light Theme" onClick={this.onSetMapStyle.bind(this, 'mapbox://styles/hackbotone/ck8vt8vdj2fz91ilax6nwtins')} />
+          <img src={"/img/icons/ic_dark_map_style.png"} className={'map-style-dark-img'} alt="Dark Theme" onClick={this.onSetMapStyle.bind(this, 'mapbox://styles/hackbotone/ck8vtayrp0x5f1io3sakcmpnv')} />
+          <img src={"/img/icons/ic_light_map_style.png"} className={'map-style-light-img'} alt="Light Theme" onClick={this.onSetMapStyle.bind(this, 'mapbox://styles/hackbotone/ck8vt8vdj2fz91ilax6nwtins')} />
         </div>
         <div className={this.state.tabSelectedtPos === 1 || this.state.tabSelectedtPos === 3 ? 'map-box-container-hide' : 'map-box-container'}></div>
         <div className={this.state.tabSelectedtPos === 2 || this.state.tabSelectedtPos === 3 ? 'parent-container-hide' : 'parent-container'}>
