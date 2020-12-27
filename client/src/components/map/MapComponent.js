@@ -35,7 +35,7 @@ class MapComponent extends Component {
         var nav = new mapboxgl.NavigationControl();
         map.addControl(nav, this.state.matches ? 'bottom-right' : 'top-right');
 
-        fetch(`http://127.0.0.1:${PORT}/api/markers.geojson`)
+        fetch(`/api/markers.geojson`)
             .then(response => response.json())
             .then(data =>
                 map.once('load', function () {

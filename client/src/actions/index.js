@@ -18,7 +18,7 @@ export const dispatchMarkers = data => ({
 });
 
 export const fetchCoronaStatistics = () => dispatch => {
-    fetch(`${BASE_URL}/api`)
+    fetch(`${BASE_URL}api`)
         .then(response => response.json())
         .then(data => {
             dispatch(dispatchStatistics(data));
