@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000;
 
 const db = 'covid-19';
 const collection = 'covid_statistics';
+const MONGOURL = process.env.MONGO_URL || `mongodb://localhost:27017/${db}`;
 
 const app = express();
 app.use(cors());
@@ -18,7 +19,7 @@ app.use(express.static(path.join(__dirname, '../build')));
 
 
 const MongoClient = require('mongodb').MongoClient;
-const url = `mongodb://localhost:27017/${db}`;
+const url = MONGOURL;
 
 async function runScheduler() {
     console.log('Running Scheduler');
