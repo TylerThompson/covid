@@ -4,7 +4,7 @@
   "description": "Coronavirus-2019 Api",
   "main": "app.js",
   "scripts": {
-    "start": "pm2 start server/app.js & pm2 serve build",
+    "start": "node server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tyler Thompson <tyler@tylerthompson.me>",
