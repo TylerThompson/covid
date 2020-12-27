@@ -7,4 +7,4 @@ export const MAP_STYLE_ACTION = 'MAP_STYLE_ACTION';
 export const MAP_FLY_ACTION = 'MAP_FLY_ACTION';
 
 export const BASE_URL = `/`;
-export const MAPBOX_ACCESS_TOKEN = process.env.MAP_API_TOKEN || 'MAP_API_TOKEN';
+export const MAPBOX_ACCESS_TOKEN = process.env.MAP_API_TOKEN;
