@@ -1,7 +1,8 @@
 <p align="center">
 <img src="https://covid19.tylerthompson.me/img/apple-touch-icon.png" alt="...">
 </p>
-# Coronavirus - (COVID-19) Application
+
+### Coronavirus - (COVID-19) Application
 The idea behind this application is to displays the statistics of Coronavirus (COVID-19) around the world and the data are being collected from [Johns Hopkins University Center for Systems Science and Engineering JHU CSSE](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data) and it updates the cases constantly on this website around the world. 
 
 ## Technical Overview
