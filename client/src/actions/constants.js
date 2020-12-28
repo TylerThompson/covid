@@ -1,0 +1,10 @@
+export const FETCH_CORONA_STATISTICS = 'FETCH_CORONA_STATISTICS';
+export const SHOW_COUNTRY_STATISTICS = 'SHOW_COUNTRY_STATISTICS';
+export const FETCH_MARKERS = 'FETCH_MARKERS';
+export const MAP_STYLE = 'MAP_STYLE';
+export const SET_ACTION = 'SET_ACTION';
+export const MAP_STYLE_ACTION = 'MAP_STYLE_ACTION';
+export const MAP_FLY_ACTION = 'MAP_FLY_ACTION';
+
+export const BASE_URL = `/`;
+export const MAPBOX_ACCESS_TOKEN = 'pk.eyJ1IjoidHlsZXJ0aG9tcHNvbiIsImEiOiJja2oyMTl4b3YxdHRhMnFtMHhydnU1c3N2In0.TRFRG0ofzKNo85m2kt3_Eg';
